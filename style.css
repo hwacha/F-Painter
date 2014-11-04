@@ -1,0 +1,14 @@
+body {
+	background-color: #444444;
+}
+
+h1 {
+	font-family: "Andale Mono";
+	color: red;
+	text-align: center;
+}
+
+p {
+	font-family: "Andale Mono";
+	font-size: 30px;
+}
