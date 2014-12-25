@@ -2,23 +2,25 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
 </head>
-<body>
+<body onLoad=>
 
 <h1>Test Dump</h1>
 
-<button type="button" onclick="ex()">!</button>
-<button type="button" onclick="qu()">?</button>
-<button type="button" onclick="hash()">#</button>
-<button type="button" onclick="ast()">*</button>
-<button type="button" onClick="dollar()">$</button>
-<button type="button" onclick="red()">RED</button>
-<button type="button" onClick="green()">GREEN</button>
-<button type="button" onClick="blue()">BLUE</button>
+<canvas id="canvas" width="1000" height="500">
+</canvas>
 
-<p id="test"> </p>
+<button type="button" onClick="paintSquares()">
+PAINT
+</button>
 
-<script src="testDump.js"></script>
+<button type="button" onClick="clearSquares()">
+CLEAR
+</button>
+
+<script src="testDump.js">
+</script>
 
 </body>
 </html>
