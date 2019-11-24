@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Bill Marcy">
+	<link rel="stylesheet" type="text/css" href="../css/readme.css">
+	<title>F-Painter: README</title>
+</head>
+<body>
+	<h1 id="title">F-Painter</h1>
+	<ol id="contents">
+		<li><a href="#description">Description</a></li>
+		<li><a href="#how-to-use">How to Use</a></li>
+		<li><a href="#what-to-add">What to Add</a></li>
+	</ol>
+	<div id="description">
+		<h2 class="heading">Description</h2>
+		<ul class="list">
+			<li>
+			F-Painter is a JavaScript web utility that visualizes 3-place functions as animated colored tiles.
+			</li>
+			<li>
+			The user enters in functions r, g, b with respect to x, y, and t which correspond to
+			a color component value at position (x, y) and at time t.
+			</li>
+			<li>
+			The user can play, pause, and stop the animated graph.
+			</li>
+		</ul>
+	</div>
+	<div id="how-to-use">
+		<h2 style="background-color: lightgrey;">How to Use</h2>
+		<ol class="list">
+			<li>Type functions in for R, G, B. <br> Possible values: &mdash;
+				<ul>
+					<li>numbers: integer value e.g. 500 or decimal value e.g. 1.45</li>
+					<li>variables: x, y, t<br>NOTE: no other variables will be recognized.</li>
+					<li>infix operators:
+						<ul style="">
+							<li><b>+</b> (addition)</li>
+							<li><b>-</b> (subtraction)</li>
+							<li><b>*</b> (multiplication)</li>
+							<li><b>/</b> (division)</li>
+							<li><b>mod </b> (modulus)</li>
+							<li><b>^</b> (exponentiation)</li>
+							<li><b>=</b> (equals) Note that relations evaluate to 1 if the relation holds, and 0 if the relation does not hold.</li>
+							<li><b>&gt;</b> (greater than)</li>
+							<li><b>&lt;</b> (less than)</li>
+						</ul>
+						ex. (1 + x), (t ^ 4), ((x * y) % t) <br/> NOTE: you need parenthesis around any expression except a number or variable
+					</li>
+				</ul>
+			</li>
+			<li>Press ENTER or click "apply".</li>
+			<li>Start and stop
+			<ul>
+				<li>Click the play button to begin the animation.</li>
+				<li>Click pause to pause the animation. Pressing play will continue from where it was paused.</li>
+				<li>Click the stop button to stop the animation and reset to the first frame.<br>
+				HINT: If no function depends on t, then using stop is the same as play: and performs better!</li>
+			</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="what-to-add">
+		<h2 style="background-color: lightgrey;">What to Add</h2>
+		<ul class="list">
+			<li>Syntax
+			<ul>
+				<li>parentheses</li>
+				<li>constants like e and &pi;</li>
+				<li>one argument operators like trig functions, log and square root</li>
+			</ul>
+			</li>
+			<li>Performance
+				<ul>
+					<li>Remove object wrapper for numbers, variables, and maybe functions and instead just use closures.
+					This will be less readable, but will probably allow for a larger frame and smaller tiles.</li>
+					<li>Find a better way to timeout the animation to avoid crashes. Right now it resets the time counter
+					when it reaches 256^2.</li>
+					<li>Automatically stop time interval if no function is dependent on t.</li>
+					<li>There are some issues with the creation of some functions that should be valid.</li>
+				</ul>
+			</li>
+			<li>Conceptual
+			<ul>
+				Add potential for 3 + 1D instead of 2 + 1D. Right now it's an aesthetic choice,
+				so that I can avoid to transform the tile structure (like constantly rotating)
+				so the user can see the whole color space. I think it would be cool to implement a parsing scheme
+				which could receive and display n-place functions in (n + 1)-dimensional space.
+			</ul>
+			<ul>
+				Add user customization of frame size, tile size, etc.
+			</ul>
+			<ul>
+				Add real-time user interaction with camera frame and maybe controllable avatar tiles.
+			</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta charset="UTF-8">
-</head>
-<body onLoad=>
+	<head>
+		<title>f-painter</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="author" content="Bill Marcy">
+	</head>
+	<body style="background-color:black;">
+		<h3><span style="color: red;">F-P</span><span style="color: #00ff00;">ain</span><span style="color: blue;">ter</span></h3>
+		<canvas id="canvas" width="1080" height="600"></canvas>
 
-<h1>Test Dump</h1>
+		<form action="javascript:apply()" name="rgb">
+			<span style="color: red;">R(x, y, t) = </span>
+			<input type="text" name="red"></input>
+			<br>
+			<span style="color: #00ff00;">G(x, y, t) = </span>
+			<input type="text" name="green"></input>
+			<br>
+			<span style="color: blue;">B(x, y, t) = </span>
+			<input type ="text" name="blue"></input>
+			<br>
 
-<canvas id="canvas" width="1000" height="500">
-</canvas>
-
-<button type="button" onClick="paintSquares()">
-PAINT
-</button>
-
-<button type="button" onClick="clearSquares()">
-CLEAR
-</button>
-
-<script src="testDump.js">
-</script>
-
-</body>
+			<input type="submit" value="apply"></input>
+		</form>
+		<a href="readme.html" target="_blank" style="color: white;"><p style="float: right; margin-right: 20%;">README</p></a>
+		<br>
+		<div id="container" align="center">
+		<div class="rectbutton" onclick="play()" id="center">&#9654;</div>
+		<div class="rectbutton" onclick="pause()" id="left">&#10074;&#10074;</div>
+		<div class="rectbutton" onclick="stop()" id="right">&#11035;</div>
+		</div>
+		<script src="color.js"></script>
+		<script src="sexp.js"></script>
+		<script src="arith.js"></script>
+		<script src="paint.js" defer></script>
+		<script src="input.js" defer></script>
+	</body>
 </html>

@@ -1,15 +1,78 @@
 body {
-	background-color: black;
+	font-family: "courier";
 }
 
-h1 {
-	font-family: "Monaco";
+h3 {
 	color: white;
 	text-align: center;
 }
 
-p {
-	font-family: "Monaco";
+form {
+	text-align: center;
 	color: white;
-	font-size: 20px;
+}
+
+input {
+	font-family: courier;
+	font-size: 110%;
+	background-color: black;
+	border-color: white;
+	color: white;
+}
+
+canvas {
+	padding-left: 0;
+    padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border: 12px solid;
+	border-color: #303030;
+	cursor: none;
+}
+
+#buttons {
+	position: absolute;
+	right: 0px;
+/*	margin-left: auto;
+	margin-right: auto;*/
+	width: 70%;
+}
+
+.rectbutton {
+	padding-left: 0;
+    padding-right: 0;
+    width: 60px;
+    height: 30px;
+	background-color: white;
+	text-align: center;
+	position: relative;
+}
+
+.rectbutton:hover {
+	background-color: lightgray;
+	cursor: grab;
+}
+
+#container {
+    width:25%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left {
+    float:left;
+    background-color: red;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    background-color: #00ff00;
+}
+
+#right {
+    float:right;
+    background-color: blue;
 }
